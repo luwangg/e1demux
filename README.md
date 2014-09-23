@@ -6,14 +6,15 @@ G.704) stream.
 
 Program receives E1 stream on stdin, catches frame alignment signal and puts
 timeslots' data to specified files.  User is able to pass a file for each
-timeslot.  If not file specified then this timeslot is skipped,
+timeslot. If no file is specified then timeslot data is wasted.
 
 How it works
 ============
 
-At first program achieves byte alignment. It is required because
-program input can be bit-shifted. Byte aligned data is checked for 
-frame alignment and then data is ready for de-multiplexing.
+At first program achieves byte alignment. It is required because E1 
+originally bit-oriented and thus program's input can be bit-shifted. 
+Byte aligned data is checked for frame alignment and then data is 
+ready for de-multiplexing.
 
 Number of received frames can be limited or continuous. 
 
